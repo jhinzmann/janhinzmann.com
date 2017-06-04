@@ -1,0 +1,12 @@
+{{ partial "header.html" . -}}
+<main class="main-content">
+  <h1>{{ .Title }}</h1>
+  <ul class="post-list">
+    {{- range .Data.Pages }}
+    <li>
+      {{.Render "li"}}
+    </li>
+    {{- end }}
+  </ul>
+</main>
+{{ partial "footer.html" . }}

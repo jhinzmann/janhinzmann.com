@@ -1,0 +1,9 @@
+.page-footer {
+  border-top: 2px solid $blue;
+  .page-footer-inner {
+    text-align: right;
+    max-width: $page-max-width;
+    padding: $general-spacing;
+    margin: 0 auto;
+  }
+}

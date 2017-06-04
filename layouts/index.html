@@ -1,0 +1,11 @@
+{{ partial "header.html" . -}}
+<main class="main-content">
+  <ul class="post-list">
+    {{- range where .Data.Pages "Section" "post" }}
+    <li>
+      {{.Render "li"}}
+    </li>
+    {{- end }}
+  </ul>
+</main>
+{{ partial "footer.html" . }}

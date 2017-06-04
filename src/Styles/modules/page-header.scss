@@ -1,0 +1,26 @@
+.page-header {
+  border-bottom: 2px solid $blue;
+
+  .page-header-inner {
+    @include clearfix;
+    max-width: $page-max-width;
+    padding: $general-spacing;
+    margin: 0 auto;
+  }
+
+  .page-logo {
+    font-size: $font-size-logo;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+    a {
+      color: $text-color;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+    @media (min-width: $screen-md) {
+      float: left;
+    }
+  }
+}

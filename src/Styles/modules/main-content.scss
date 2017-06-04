@@ -1,0 +1,12 @@
+.main-content {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $general-spacing;
+  .post-time {
+    font-size: $font-size-small;
+  }
+  .task-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}

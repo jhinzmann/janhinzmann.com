@@ -1,0 +1,6 @@
+<article itemscope="" itemtype="http://schema.org/BlogPosting">
+  <time itemprop="datePublished" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2. Jan 2006" .Date }}</time>
+  <h1 itemprop="name headline"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+  <p>{{ .Description }}</p>
+  {{ partial "taglist.html" . }}
+</article>

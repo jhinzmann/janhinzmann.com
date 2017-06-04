@@ -1,0 +1,7 @@
+{{ with .Params.tags }}
+<div class="tags-list">
+  <small itemprop="keywords">
+    {{ delimit (apply (apply (sort .) "partial" "taglink" ".") "chomp" ".") ", " }}
+  </small>
+</div>
+{{ end }}

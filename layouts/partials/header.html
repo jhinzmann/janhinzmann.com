@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if ne .URL "/" }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300%7CWork+Sans:300,500" rel="stylesheet">
+  <style> {{- partial "style.css" . | safeCSS -}}</style>
+  {{ .Hugo.Generator }}
+  {{- with .Description}}
+  <meta content="{{.}}" name="description">
+  {{- end}}
+  <meta content="{{ if ne .URL "/" }}{{ .Title }} - {{ end }}{{ .Site.Title }}" property="og:title">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#396a85">
+  <meta name="theme-color" content="#396a85">
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header-inner">
+    <h1 class="page-logo"><a href="{{ .Site.BaseURL }}">Jan Hinzmann</a></h1>
+    <nav class="navigation">
+      {{ $currentPage := . -}}
+      <ul>
+        {{- range .Site.Menus.main }}
+        <li class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .)}}active{{end}}{{if .Pre}}menu-icon{{end}}">
+          {{ if .Pre -}}
+          <a href="{{.URL}}" title="{{.Name}}" class="menu-icon-link">{{.Pre}}</a>
+          {{- else -}}
+          <a href="{{.URL}}">{{ .Name }}</a>
+          {{- end }}
+        </li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</header>

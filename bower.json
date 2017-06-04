@@ -1,0 +1,7 @@
+{
+  "name": "hugo-theme-janhinzmann",
+  "version": "1.0.0",
+  "dependencies": {
+    "normalize-css": "^6.0.0"
+  }
+}

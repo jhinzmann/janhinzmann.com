@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<main class="main-content single-post"  itemscope="" itemtype="http://schema.org/BlogPosting">
+  <time class="post-time" itemprop="datePublished" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2. Jan 2006" .Date }}</time>
+  <h1 itemprop="name headline">{{ .Title }}</h1>
+  <div class="hidden" itemprop="author publisher" itemscope="" itemtype="http://schema.org/Person">
+    <span itemprop="name">Jan Hinzmann</span>
+    <a href="https://janhinzmann.com/about-me" itemprop="url">janhinzmann.com/about-me</a>
+  </div>
+  <div itemprop="articleBody"></div>
+  {{ .Content }}
+  {{ partial "taglist.html" . }}
+</main>
+{{ partial "footer.html" . }}

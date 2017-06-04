@@ -1,0 +1,54 @@
+.navigation {
+  @media (min-width: $screen-md) {
+    float: right;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    li {
+      display: block;
+      margin-bottom: 5px;
+      &.active {
+        font-weight: bold;
+      }
+      &.menu-icon {
+        margin-top: 10px;
+        display: inline-block;
+      }
+      @media (min-width: $screen-md) {
+        text-align: left;
+        display: inline-block;
+        &.menu-icon {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      .github-icon,
+      .xing-icon {
+        fill: $red;
+      }
+    }
+    @media (min-width: $screen-md) {
+      padding: 10px;
+      margin: 5px 0 0;
+    }
+  }
+  .menu-icon-link {
+    padding: 10px 15px;
+    svg {
+      text-align: center;
+      margin-bottom: -5px;
+      fill: $text-color;
+      @media (min-width: $screen-md) {
+        margin-left: -15px;
+      }
+    }
+  }
+}
