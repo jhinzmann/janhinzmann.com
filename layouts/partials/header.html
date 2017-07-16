@@ -10,8 +10,11 @@
   {{ .Hugo.Generator }}
   {{- with .Description}}
   <meta content="{{.}}" name="description">
+  <meta property="og:description" content="{{.}}">
   {{- end}}
-  <meta content="{{ if ne .URL "/" }}{{ .Title }} - {{ end }}{{ .Site.Title }}" property="og:title">
+  <meta property="og:title" content="{{ if ne .URL "/" }}{{ .Title }} - {{ end }}{{ .Site.Title }}" >
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
