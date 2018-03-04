@@ -9,9 +9,9 @@ type = "page"
   weight = 20
 +++
 
-Hey, I’m **Jan Hinzmann**, 24 years old, from Germany and author of this Blog.  
-I work at [itao GmbH & Co. KG](https://www.itao.de) as a **web developer**,  
-where I do backend and frontend programming with languages like **HTML, CSS, JavaScript, PHP, MySQL** and frameworks/libraries like **Neos, Flow, Angular, D3.js**.
+Hey, I’m **Jan Hinzmann**, 25 years old, from Germany and author of this Blog.  
+I work at [Plan.One ccs GmbH](https://plan.one) as a **software developer**,  
+where I do frontend programming mostly with **Angular**.
 
 I earned my bachelor's degree in **Information Sciences for Business** and currently I am attending a master's degree program in **Practical Computer Science** at [FernUniversität Hagen](https://www.fernuni-hagen.de/).
 
